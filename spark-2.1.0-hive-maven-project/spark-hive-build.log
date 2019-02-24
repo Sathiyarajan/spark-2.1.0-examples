@@ -1,0 +1,377 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.spark.2_1.hive:Spark-2.1-hive:jar:1.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-shade-plugin is missing. @ line 208, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Spark-2.1 Scala hive Demo Application 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] Downloading: http://repo1.maven.org/maven2/joda-time/joda-time/maven-metadata.xml
+[INFO] Downloading: https://repository.apache.org/content/repositories/snapshots/joda-time/joda-time/maven-metadata.xml
+[INFO] Downloading: http://repository.jboss.org/nexus/content/groups/public/joda-time/joda-time/maven-metadata.xml
+[INFO] Downloading: https://code.lds.org/nexus/content/groups/main-repo/joda-time/joda-time/maven-metadata.xml
+[INFO] Downloaded: http://repository.jboss.org/nexus/content/groups/public/joda-time/joda-time/maven-metadata.xml (228 B at 0.1 KB/sec)
+[INFO] Downloaded: http://repo1.maven.org/maven2/joda-time/joda-time/maven-metadata.xml (2 KB at 0.8 KB/sec)
+[INFO] Downloaded: https://code.lds.org/nexus/content/groups/main-repo/joda-time/joda-time/maven-metadata.xml (976 B at 0.2 KB/sec)
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ Spark-2.1-hive ---
+[INFO] Deleting /home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/target
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.2:add-source (eclipse-add-source) @ Spark-2.1-hive ---
+[INFO] Add Source directory: /home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/src/main/scala
+[INFO] Add Test Source directory: /home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/src/test/scala
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Spark-2.1-hive ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/src/main/resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.2:compile (scala-compile-first) @ Spark-2.1-hive ---
+[WARNING]  Expected all dependencies to require Scala version: 2.11.7
+[WARNING]  com.twitter:chill_2.11:0.8.0 requires scala version: 2.11.7
+[WARNING]  org.apache.spark:spark-core_2.11:2.1.0 requires scala version: 2.11.8
+[WARNING] Multiple versions of scala libraries detected!
+[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+[INFO] Using incremental compilation
+[INFO] Compiling 6 Scala sources to /home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/target/classes...
+[WARNING] /home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/src/main/scala/com/spark2/hive/SparkToHive.scala:10: class HiveContext in package hive is deprecated: Use SparkSession.builder.enableHiveSupport instead
+[WARNING]   val sqlContext = new HiveContext(sc)
+[WARNING]                        ^
+[WARNING] one warning found
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Spark-2.1-hive ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Spark-2.1-hive ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.2:testCompile (scala-test-compile-first) @ Spark-2.1-hive ---
+[WARNING]  Expected all dependencies to require Scala version: 2.11.7
+[WARNING]  com.twitter:chill_2.11:0.8.0 requires scala version: 2.11.7
+[WARNING]  org.apache.spark:spark-core_2.11:2.1.0 requires scala version: 2.11.8
+[WARNING] Multiple versions of scala libraries detected!
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Spark-2.1-hive ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ Spark-2.1-hive ---
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ Spark-2.1-hive ---
+[INFO] Building jar: /home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/target/Spark-2.1-hive-1.0.jar
+[INFO] 
+[INFO] --- maven-shade-plugin:3.2.1:shade (default) @ Spark-2.1-hive ---
+[INFO] Including org.apache.spark:spark-tags_2.11:jar:2.1.0 in the shaded jar.
+[INFO] Including org.scalatest:scalatest_2.11:jar:2.2.6 in the shaded jar.
+[INFO] Including org.codehaus.jackson:jackson-core-asl:jar:1.9.11 in the shaded jar.
+[INFO] Including com.fasterxml.jackson.core:jackson-databind:jar:2.6.5 in the shaded jar.
+[INFO] Including org.spark-project.spark:unused:jar:1.0.0 in the shaded jar.
+[INFO] Including org.apache.hadoop:hadoop-annotations:jar:2.2.0 in the shaded jar.
+[INFO] Including net.java.dev.jets3t:jets3t:jar:0.7.1 in the shaded jar.
+[INFO] Including org.apache.curator:curator-recipes:jar:2.4.0 in the shaded jar.
+[INFO] Including org.apache.curator:curator-framework:jar:2.4.0 in the shaded jar.
+[INFO] Including org.apache.zookeeper:zookeeper:jar:3.4.5 in the shaded jar.
+[INFO] Including org.apache.commons:commons-math3:jar:3.4.1 in the shaded jar.
+[INFO] Including com.google.code.findbugs:jsr305:jar:1.3.9 in the shaded jar.
+[INFO] Including org.slf4j:slf4j-api:jar:1.7.16 in the shaded jar.
+[INFO] Including log4j:log4j:jar:1.2.17 in the shaded jar.
+[INFO] Including org.slf4j:slf4j-log4j12:jar:1.7.16 in the shaded jar.
+[INFO] Including com.ning:compress-lzf:jar:1.0.3 in the shaded jar.
+[INFO] Excluding org.xerial.snappy:snappy-java:jar:1.1.2.6 from the shaded jar.
+[INFO] Including net.jpountz.lz4:lz4:jar:1.3.0 in the shaded jar.
+[INFO] Including commons-net:commons-net:jar:2.2 in the shaded jar.
+[INFO] Excluding org.scala-lang:scala-library:jar:2.11.8 from the shaded jar.
+[INFO] Including io.netty:netty-all:jar:4.0.42.Final in the shaded jar.
+[INFO] Including io.netty:netty:jar:3.8.0.Final in the shaded jar.
+[INFO] Including io.dropwizard.metrics:metrics-core:jar:3.1.2 in the shaded jar.
+[INFO] Including com.datastax.spark:spark-cassandra-connector_2.11:jar:2.0.1 in the shaded jar.
+[INFO] Including org.joda:joda-convert:jar:1.2 in the shaded jar.
+[INFO] Including commons-beanutils:commons-beanutils:jar:1.9.3 in the shaded jar.
+[INFO] Including commons-collections:commons-collections:jar:3.2.2 in the shaded jar.
+[INFO] Including joda-time:joda-time:jar:2.3 in the shaded jar.
+[INFO] Including com.twitter:jsr166e:jar:1.1.0 in the shaded jar.
+[INFO] Excluding org.scala-lang:scala-reflect:jar:2.11.8 from the shaded jar.
+[INFO] Including commons-io:commons-io:jar:2.4 in the shaded jar.
+[INFO] Including commons-lang:commons-lang:jar:2.6 in the shaded jar.
+[INFO] Including org.apache.commons:commons-compress:jar:1.4.1 in the shaded jar.
+[INFO] Including org.tukaani:xz:jar:1.0 in the shaded jar.
+[INFO] Including org.apache.avro:avro:jar:1.7.7 in the shaded jar.
+[INFO] Including com.thoughtworks.paranamer:paranamer:jar:2.3 in the shaded jar.
+[INFO] Including commons-httpclient:commons-httpclient:jar:3.1 in the shaded jar.
+[INFO] Including org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13 in the shaded jar.
+[INFO] Including commons-codec:commons-codec:jar:1.10 in the shaded jar.
+[INFO] Including com.databricks:spark-avro_2.11:jar:3.2.0 in the shaded jar.
+[INFO] Including org.apache.spark:spark-streaming_2.11:jar:2.1.0 in the shaded jar.
+[INFO] Including org.apache.spark:spark-streaming-kafka-0-8_2.11:jar:2.1.0 in the shaded jar.
+[INFO] Including org.apache.kafka:kafka_2.11:jar:0.8.2.1 in the shaded jar.
+[INFO] Excluding org.scala-lang.modules:scala-xml_2.11:jar:1.0.2 from the shaded jar.
+[INFO] Including com.yammer.metrics:metrics-core:jar:2.2.0 in the shaded jar.
+[INFO] Excluding org.scala-lang.modules:scala-parser-combinators_2.11:jar:1.0.2 from the shaded jar.
+[INFO] Including com.101tec:zkclient:jar:0.3 in the shaded jar.
+[INFO] Including org.apache.kafka:kafka-clients:jar:0.8.2.1 in the shaded jar.
+[INFO] Including org.coursera:metrics-datadog:jar:1.1.6 in the shaded jar.
+[INFO] Including org.apache.httpcomponents:fluent-hc:jar:4.3.6 in the shaded jar.
+[INFO] Including com.datadoghq:java-dogstatsd-client:jar:2.1.1 in the shaded jar.
+[INFO] Including org.apache.httpcomponents:httpclient:jar:4.5.2 in the shaded jar.
+[INFO] Including org.apache.httpcomponents:httpcore:jar:4.4.4 in the shaded jar.
+[INFO] Including commons-logging:commons-logging:jar:1.2 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-athena:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:jmespath-java:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-marketplaceentitlement:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-codestar:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-lexmodelbuilding:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-resourcegroupstaggingapi:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-pinpoint:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-xray:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-opsworkscm:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-support:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-simpledb:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-servicecatalog:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-servermigration:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-simpleworkflow:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-storagegateway:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-route53:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-s3:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-importexport:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-sts:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-sqs:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-rds:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-redshift:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-elasticbeanstalk:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-glacier:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-iam:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-datapipeline:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-elasticloadbalancing:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-elasticloadbalancingv2:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-emr:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-elasticache:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-elastictranscoder:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-ec2:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-dynamodb:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-sns:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-budgets:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-cloudtrail:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-cloudwatch:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-logs:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-events:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-cognitoidentity:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-cognitosync:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-directconnect:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-cloudformation:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-cloudfront:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-clouddirectory:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-kinesis:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-opsworks:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-ses:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-autoscaling:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-cloudsearch:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-cloudwatchmetrics:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-codedeploy:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-codepipeline:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-kms:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-config:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-lambda:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-ecs:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-ecr:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-cloudhsm:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-ssm:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-workspaces:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-machinelearning:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-directory:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-efs:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-codecommit:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-devicefarm:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-elasticsearch:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-waf:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-marketplacecommerceanalytics:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-inspector:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-iot:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-api-gateway:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-acm:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-gamelift:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-dms:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-marketplacemeteringservice:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-cognitoidp:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-discovery:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-applicationautoscaling:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-snowball:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-rekognition:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-polly:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-lightsail:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-stepfunctions:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-health:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-costandusagereport:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-codebuild:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-appstream:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-shield:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-batch:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-lex:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-mechanicalturkrequester:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-organizations:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-workdocs:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-core:jar:1.11.132 in the shaded jar.
+[INFO] Including software.amazon.ion:ion-java:jar:1.0.2 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-models:jar:1.11.132 in the shaded jar.
+[INFO] Including com.amazonaws:aws-java-sdk-swf-libraries:jar:1.11.22 in the shaded jar.
+[INFO] Including org.apache.hadoop:hadoop-aws:jar:2.6.0 in the shaded jar.
+[INFO] Including org.apache.hadoop:hadoop-common:jar:2.6.0 in the shaded jar.
+[INFO] Including xmlenc:xmlenc:jar:0.52 in the shaded jar.
+[INFO] Including javax.servlet:servlet-api:jar:2.5 in the shaded jar.
+[INFO] Including org.mortbay.jetty:jetty:jar:6.1.26 in the shaded jar.
+[INFO] Including org.mortbay.jetty:jetty-util:jar:6.1.26 in the shaded jar.
+[INFO] Including com.sun.jersey:jersey-core:jar:1.9 in the shaded jar.
+[INFO] Including com.sun.jersey:jersey-json:jar:1.9 in the shaded jar.
+[INFO] Including org.codehaus.jettison:jettison:jar:1.1 in the shaded jar.
+[INFO] Including com.sun.xml.bind:jaxb-impl:jar:2.2.3-1 in the shaded jar.
+[INFO] Including javax.xml.bind:jaxb-api:jar:2.2.2 in the shaded jar.
+[INFO] Including javax.xml.stream:stax-api:jar:1.0-2 in the shaded jar.
+[INFO] Including javax.activation:activation:jar:1.1 in the shaded jar.
+[INFO] Including org.codehaus.jackson:jackson-jaxrs:jar:1.8.3 in the shaded jar.
+[INFO] Including org.codehaus.jackson:jackson-xc:jar:1.8.3 in the shaded jar.
+[INFO] Including com.sun.jersey:jersey-server:jar:1.9 in the shaded jar.
+[INFO] Including asm:asm:jar:3.1 in the shaded jar.
+[INFO] Including tomcat:jasper-compiler:jar:5.5.23 in the shaded jar.
+[INFO] Including tomcat:jasper-runtime:jar:5.5.23 in the shaded jar.
+[INFO] Including javax.servlet.jsp:jsp-api:jar:2.1 in the shaded jar.
+[INFO] Including commons-el:commons-el:jar:1.0 in the shaded jar.
+[INFO] Including commons-configuration:commons-configuration:jar:1.6 in the shaded jar.
+[INFO] Including commons-digester:commons-digester:jar:1.8 in the shaded jar.
+[INFO] Including commons-beanutils:commons-beanutils-core:jar:1.8.0 in the shaded jar.
+[INFO] Including com.google.protobuf:protobuf-java:jar:2.5.0 in the shaded jar.
+[INFO] Including com.google.code.gson:gson:jar:2.2.4 in the shaded jar.
+[INFO] Including org.apache.hadoop:hadoop-auth:jar:2.6.0 in the shaded jar.
+[INFO] Including org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15 in the shaded jar.
+[INFO] Including org.apache.directory.server:apacheds-i18n:jar:2.0.0-M15 in the shaded jar.
+[INFO] Including org.apache.directory.api:api-asn1-api:jar:1.0.0-M20 in the shaded jar.
+[INFO] Including org.apache.directory.api:api-util:jar:1.0.0-M20 in the shaded jar.
+[INFO] Including com.jcraft:jsch:jar:0.1.42 in the shaded jar.
+[INFO] Including org.apache.curator:curator-client:jar:2.6.0 in the shaded jar.
+[INFO] Including org.htrace:htrace-core:jar:3.0.4 in the shaded jar.
+[INFO] Including com.fasterxml.jackson.core:jackson-annotations:jar:2.6.7 in the shaded jar.
+[INFO] Including com.stratio.datasource:spark-mongodb_2.11:jar:0.12.0 in the shaded jar.
+[INFO] Including com.typesafe.akka:akka-actor_2.11:jar:2.3.11 in the shaded jar.
+[INFO] Including com.typesafe:config:jar:1.2.1 in the shaded jar.
+[INFO] Including org.mongodb:casbah-commons_2.11:jar:2.8.0 in the shaded jar.
+[INFO] Including com.github.nscala-time:nscala-time_2.11:jar:1.0.0 in the shaded jar.
+[INFO] Including org.mongodb:mongo-java-driver:jar:2.13.0 in the shaded jar.
+[INFO] Including org.mongodb:casbah-query_2.11:jar:2.8.0 in the shaded jar.
+[INFO] Including org.mongodb:casbah-core_2.11:jar:2.8.0 in the shaded jar.
+[INFO] Including mysql:mysql-connector-java:jar:5.1.38 in the shaded jar.
+[INFO] Including org.yaml:snakeyaml:jar:1.18 in the shaded jar.
+[INFO] Including org.elasticsearch:elasticsearch-spark-20_2.11:jar:5.6.2 in the shaded jar.
+[INFO] Including org.elasticsearch:elasticsearch:jar:2.4.6 in the shaded jar.
+[INFO] Including org.apache.lucene:lucene-core:jar:5.5.4 in the shaded jar.
+[INFO] Including org.apache.lucene:lucene-backward-codecs:jar:5.5.4 in the shaded jar.
+[INFO] Including org.apache.lucene:lucene-analyzers-common:jar:5.5.4 in the shaded jar.
+[INFO] Including org.apache.lucene:lucene-queries:jar:5.5.4 in the shaded jar.
+[INFO] Including org.apache.lucene:lucene-memory:jar:5.5.4 in the shaded jar.
+[INFO] Including org.apache.lucene:lucene-highlighter:jar:5.5.4 in the shaded jar.
+[INFO] Including org.apache.lucene:lucene-queryparser:jar:5.5.4 in the shaded jar.
+[INFO] Including org.apache.lucene:lucene-sandbox:jar:5.5.4 in the shaded jar.
+[INFO] Including org.apache.lucene:lucene-suggest:jar:5.5.4 in the shaded jar.
+[INFO] Including org.apache.lucene:lucene-misc:jar:5.5.4 in the shaded jar.
+[INFO] Including org.apache.lucene:lucene-join:jar:5.5.4 in the shaded jar.
+[INFO] Including org.apache.lucene:lucene-grouping:jar:5.5.4 in the shaded jar.
+[INFO] Including org.apache.lucene:lucene-spatial:jar:5.5.4 in the shaded jar.
+[INFO] Including org.apache.lucene:lucene-spatial3d:jar:5.5.4 in the shaded jar.
+[INFO] Including com.spatial4j:spatial4j:jar:0.5 in the shaded jar.
+[INFO] Including com.google.guava:guava:jar:18.0 in the shaded jar.
+[INFO] Including org.elasticsearch:securesm:jar:1.0 in the shaded jar.
+[INFO] Including com.carrotsearch:hppc:jar:0.7.1 in the shaded jar.
+[INFO] Including com.fasterxml.jackson.core:jackson-core:jar:2.8.1 in the shaded jar.
+[INFO] Including com.fasterxml.jackson.dataformat:jackson-dataformat-smile:jar:2.8.1 in the shaded jar.
+[INFO] Including com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.8.1 in the shaded jar.
+[INFO] Including com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:jar:2.8.1 in the shaded jar.
+[INFO] Including com.tdunning:t-digest:jar:3.0 in the shaded jar.
+[INFO] Including org.hdrhistogram:HdrHistogram:jar:2.1.6 in the shaded jar.
+[INFO] Including commons-cli:commons-cli:jar:1.3.1 in the shaded jar.
+[INFO] Including org.elasticsearch.plugin:delete-by-query:jar:2.4.6 in the shaded jar.
+[INFO] Including com.databricks:spark-xml_2.11:jar:0.4.1 in the shaded jar.
+[WARNING] elasticsearch-2.4.6.jar, joda-time-2.3.jar define 1 overlapping classes: 
+[WARNING]   - org.joda.time.base.BaseDateTime
+[WARNING] asm-3.1.jar, spark-cassandra-connector_2.11-2.0.1.jar define 21 overlapping classes: 
+[WARNING]   - org.objectweb.asm.Type
+[WARNING]   - org.objectweb.asm.AnnotationVisitor
+[WARNING]   - org.objectweb.asm.MethodVisitor
+[WARNING]   - org.objectweb.asm.Attribute
+[WARNING]   - org.objectweb.asm.FieldWriter
+[WARNING]   - org.objectweb.asm.signature.SignatureWriter
+[WARNING]   - org.objectweb.asm.MethodWriter
+[WARNING]   - org.objectweb.asm.Edge
+[WARNING]   - org.objectweb.asm.Handler
+[WARNING]   - org.objectweb.asm.ByteVector
+[WARNING]   - 11 more...
+[WARNING] jasper-compiler-5.5.23.jar, jasper-runtime-5.5.23.jar define 1 overlapping classes: 
+[WARNING]   - org.apache.jasper.compiler.Localizer
+[WARNING] spark-streaming-kafka-0-8_2.11-2.1.0.jar, spark-tags_2.11-2.1.0.jar, spark-streaming_2.11-2.1.0.jar, unused-1.0.0.jar define 1 overlapping classes: 
+[WARNING]   - org.apache.spark.unused.UnusedStubClass
+[WARNING] commons-beanutils-core-1.8.0.jar, commons-beanutils-1.9.3.jar define 107 overlapping classes: 
+[WARNING]   - org.apache.commons.beanutils.ConvertUtilsBean
+[WARNING]   - org.apache.commons.beanutils.converters.SqlTimeConverter
+[WARNING]   - org.apache.commons.beanutils.converters.FloatArrayConverter
+[WARNING]   - org.apache.commons.beanutils.converters.LongArrayConverter
+[WARNING]   - org.apache.commons.beanutils.converters.BooleanArrayConverter
+[WARNING]   - org.apache.commons.beanutils.converters.StringConverter
+[WARNING]   - org.apache.commons.beanutils.LazyDynaMap
+[WARNING]   - org.apache.commons.beanutils.PropertyUtils
+[WARNING]   - org.apache.commons.beanutils.converters.URLConverter
+[WARNING]   - org.apache.commons.beanutils.locale.converters.IntegerLocaleConverter
+[WARNING]   - 97 more...
+[WARNING] commons-beanutils-core-1.8.0.jar, commons-collections-3.2.2.jar define 10 overlapping classes: 
+[WARNING]   - org.apache.commons.collections.FastHashMap$EntrySet
+[WARNING]   - org.apache.commons.collections.FastHashMap$KeySet
+[WARNING]   - org.apache.commons.collections.ArrayStack
+[WARNING]   - org.apache.commons.collections.FastHashMap$CollectionView$CollectionViewIterator
+[WARNING]   - org.apache.commons.collections.FastHashMap$Values
+[WARNING]   - org.apache.commons.collections.FastHashMap$CollectionView
+[WARNING]   - org.apache.commons.collections.FastHashMap$1
+[WARNING]   - org.apache.commons.collections.Buffer
+[WARNING]   - org.apache.commons.collections.FastHashMap
+[WARNING]   - org.apache.commons.collections.BufferUnderflowException
+[WARNING] maven-shade-plugin has detected that some class files are
+[WARNING] present in two or more JARs. When this happens, only one
+[WARNING] single version of the class is copied to the uber jar.
+[WARNING] Usually this is not harmful and you can skip these warnings,
+[WARNING] otherwise try to manually exclude artifacts based on
+[WARNING] mvn dependency:tree -Ddetail=true and the above output.
+[WARNING] See http://maven.apache.org/plugins/maven-shade-plugin/
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/target/Spark-2.1-hive-1.0.jar with /home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/target/Spark-2.1-hive-1.0-shaded.jar
+[INFO] Dependency-reduced POM written at: /home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/dependency-reduced-pom.xml
+[INFO] 
+[INFO] >>> scala-maven-plugin:3.2.2:doc-jar (attach-scaladocs) > generate-sources @ Spark-2.1-hive >>>
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.2:add-source (eclipse-add-source) @ Spark-2.1-hive ---
+[INFO] 
+[INFO] <<< scala-maven-plugin:3.2.2:doc-jar (attach-scaladocs) < generate-sources @ Spark-2.1-hive <<<
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.2:doc-jar (attach-scaladocs) @ Spark-2.1-hive ---
+[WARNING]  Expected all dependencies to require Scala version: 2.11.7
+[WARNING]  com.twitter:chill_2.11:0.8.0 requires scala version: 2.11.7
+[WARNING]  org.apache.spark:spark-core_2.11:2.1.0 requires scala version: 2.11.8
+[WARNING] Multiple versions of scala libraries detected!
+[WARNING]  Expected all dependencies to require Scala version: 2.11.7
+[WARNING]  com.twitter:chill_2.11:0.8.0 requires scala version: 2.11.7
+[WARNING]  org.apache.spark:spark-core_2.11:2.1.0 requires scala version: 2.11.8
+[WARNING] Multiple versions of scala libraries detected!
+model contains 13 documentable templates
+[INFO] Building jar: /home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/target/Spark-2.1-hive-1.0-javadoc.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ Spark-2.1-hive ---
+[INFO] Installing /home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/target/Spark-2.1-hive-1.0.jar to /home/ubuntu/.m2/repository/com/spark/2_1/hive/Spark-2.1-hive/1.0/Spark-2.1-hive-1.0.jar
+[INFO] Installing /home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/dependency-reduced-pom.xml to /home/ubuntu/.m2/repository/com/spark/2_1/hive/Spark-2.1-hive/1.0/Spark-2.1-hive-1.0.pom
+[INFO] Installing /home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/target/Spark-2.1-hive-1.0-javadoc.jar to /home/ubuntu/.m2/repository/com/spark/2_1/hive/Spark-2.1-hive/1.0/Spark-2.1-hive-1.0-javadoc.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 01:47 min
+[INFO] Finished at: 2019-02-23T12:42:31+05:30
+[INFO] Final Memory: 54M/832M
+[INFO] ------------------------------------------------------------------------
+

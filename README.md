@@ -1,2 +1,4 @@
-# spark-2.1.0-examples
-in memory processing engine
+
+You can reach me for any suggestions/clarifications on  : shathi.ece@gmail.com 
+Feel free to share any insights or constructive criticism. Cheers!!                                                           
+#Happy Sparking!!!..  

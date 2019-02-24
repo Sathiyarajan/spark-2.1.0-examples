@@ -1,0 +1,160 @@
+root@big-vm:/home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/target# /opt/spark/spark-2.2.1-bin-hadoop2.7/bin/spark-submit --master local[*] --class "com.spark2.hive.SparkToHive" /home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/target/Spark-2.1-hive-1.0.jar
+
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/02/23 12:47:34 INFO SparkContext: Running Spark version 2.2.1
+19/02/23 12:47:35 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/02/23 12:47:36 INFO SparkContext: Submitted application: TestHive
+19/02/23 12:47:36 INFO SecurityManager: Changing view acls to: root
+19/02/23 12:47:36 INFO SecurityManager: Changing modify acls to: root
+19/02/23 12:47:36 INFO SecurityManager: Changing view acls groups to: 
+19/02/23 12:47:36 INFO SecurityManager: Changing modify acls groups to: 
+19/02/23 12:47:36 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/02/23 12:47:37 INFO Utils: Successfully started service 'sparkDriver' on port 45963.
+19/02/23 12:47:38 INFO SparkEnv: Registering MapOutputTracker
+19/02/23 12:47:38 INFO SparkEnv: Registering BlockManagerMaster
+19/02/23 12:47:38 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+19/02/23 12:47:38 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+19/02/23 12:47:38 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-0e7d715b-5c81-4a11-9763-5368fd25be7a
+19/02/23 12:47:38 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+19/02/23 12:47:38 INFO SparkEnv: Registering OutputCommitCoordinator
+19/02/23 12:47:39 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+19/02/23 12:47:39 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.1.29:4040
+19/02/23 12:47:39 INFO SparkContext: Added JAR file:/home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/target/Spark-2.1-hive-1.0.jar at spark://192.168.1.29:45963/jars/Spark-2.1-hive-1.0.jar with timestamp 1550906259382
+19/02/23 12:47:39 INFO Executor: Starting executor ID driver on host localhost
+19/02/23 12:47:39 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 43509.
+19/02/23 12:47:39 INFO NettyBlockTransferService: Server created on 192.168.1.29:43509
+19/02/23 12:47:39 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/02/23 12:47:39 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.1.29, 43509, None)
+19/02/23 12:47:39 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.1.29:43509 with 366.3 MB RAM, BlockManagerId(driver, 192.168.1.29, 43509, None)
+19/02/23 12:47:39 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.1.29, 43509, None)
+19/02/23 12:47:39 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.1.29, 43509, None)
+19/02/23 12:47:40 INFO SharedState: loading hive config file: file:/opt/spark/spark-2.2.1-bin-hadoop2.7/conf/hive-site.xml
+19/02/23 12:47:40 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/target/spark-warehouse').
+19/02/23 12:47:40 INFO SharedState: Warehouse path is 'file:/home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/target/spark-warehouse'.
+19/02/23 12:47:42 INFO HiveUtils: Initializing HiveMetastoreConnection version 1.2.1 using Spark classes.
+19/02/23 12:47:44 INFO HiveMetaStore: 0: Opening raw store with implemenation class:org.apache.hadoop.hive.metastore.ObjectStore
+19/02/23 12:47:44 INFO ObjectStore: ObjectStore, initialize called
+19/02/23 12:47:45 INFO Persistence: Property hive.metastore.integral.jdo.pushdown unknown - will be ignored
+19/02/23 12:47:45 INFO Persistence: Property datanucleus.cache.level2 unknown - will be ignored
+19/02/23 12:47:47 INFO ObjectStore: Setting MetaStore object pin classes with hive.metastore.cache.pinobjtypes="Table,StorageDescriptor,SerDeInfo,Partition,Database,Type,FieldSchema,Order"
+19/02/23 12:47:48 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MFieldSchema" is tagged as "embedded-only" so does not have its own datastore table.
+19/02/23 12:47:48 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MOrder" is tagged as "embedded-only" so does not have its own datastore table.
+19/02/23 12:47:48 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MFieldSchema" is tagged as "embedded-only" so does not have its own datastore table.
+19/02/23 12:47:48 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MOrder" is tagged as "embedded-only" so does not have its own datastore table.
+19/02/23 12:47:49 INFO Query: Reading in results for query "org.datanucleus.store.rdbms.query.SQLQuery@0" since the connection used is closing
+19/02/23 12:47:49 INFO MetaStoreDirectSql: Using direct SQL, underlying DB is MYSQL
+19/02/23 12:47:49 INFO ObjectStore: Initialized ObjectStore
+19/02/23 12:47:49 INFO HiveMetaStore: Added admin role in metastore
+19/02/23 12:47:49 INFO HiveMetaStore: Added public role in metastore
+19/02/23 12:47:49 INFO HiveMetaStore: No user is added in admin role, since config is empty
+19/02/23 12:47:49 INFO HiveMetaStore: 0: get_all_databases
+19/02/23 12:47:49 INFO audit: ugi=root	ip=unknown-ip-addr	cmd=get_all_databases	
+19/02/23 12:47:49 INFO HiveMetaStore: 0: get_functions: db=default pat=*
+19/02/23 12:47:49 INFO audit: ugi=root	ip=unknown-ip-addr	cmd=get_functions: db=default pat=*	
+19/02/23 12:47:49 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MResourceUri" is tagged as "embedded-only" so does not have its own datastore table.
+19/02/23 12:47:49 INFO HiveMetaStore: 0: get_functions: db=type1_test pat=*
+19/02/23 12:47:49 INFO audit: ugi=root	ip=unknown-ip-addr	cmd=get_functions: db=type1_test pat=*	
+19/02/23 12:47:50 INFO SessionState: Created local directory: /tmp/28f155f8-bf48-4ef1-950f-3d9c2476cb39_resources
+19/02/23 12:47:50 INFO SessionState: Created HDFS directory: /tmp/hive/root/28f155f8-bf48-4ef1-950f-3d9c2476cb39
+19/02/23 12:47:50 INFO SessionState: Created local directory: /tmp/root/28f155f8-bf48-4ef1-950f-3d9c2476cb39
+19/02/23 12:47:50 INFO SessionState: Created HDFS directory: /tmp/hive/root/28f155f8-bf48-4ef1-950f-3d9c2476cb39/_tmp_space.db
+19/02/23 12:47:50 INFO HiveClientImpl: Warehouse location for Hive client (version 1.2.1) is file:/home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/target/spark-warehouse
+19/02/23 12:47:50 INFO HiveMetaStore: 0: get_database: default
+19/02/23 12:47:50 INFO audit: ugi=root	ip=unknown-ip-addr	cmd=get_database: default	
+19/02/23 12:47:50 INFO HiveMetaStore: 0: get_database: global_temp
+19/02/23 12:47:50 INFO audit: ugi=root	ip=unknown-ip-addr	cmd=get_database: global_temp	
+19/02/23 12:47:50 WARN ObjectStore: Failed to get database global_temp, returning NoSuchObjectException
+19/02/23 12:47:50 INFO SessionState: Created local directory: /tmp/47fa2f2e-4137-4322-92bb-46885625b269_resources
+19/02/23 12:47:50 INFO SessionState: Created HDFS directory: /tmp/hive/root/47fa2f2e-4137-4322-92bb-46885625b269
+19/02/23 12:47:50 INFO SessionState: Created local directory: /tmp/root/47fa2f2e-4137-4322-92bb-46885625b269
+19/02/23 12:47:50 INFO SessionState: Created HDFS directory: /tmp/hive/root/47fa2f2e-4137-4322-92bb-46885625b269/_tmp_space.db
+19/02/23 12:47:50 INFO HiveClientImpl: Warehouse location for Hive client (version 1.2.1) is file:/home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/target/spark-warehouse
+19/02/23 12:47:50 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+19/02/23 12:47:50 INFO SparkSqlParser: Parsing command: select * from type1_test.contacts_target
+19/02/23 12:47:51 INFO HiveMetaStore: 0: get_database: type1_test
+19/02/23 12:47:51 INFO audit: ugi=root	ip=unknown-ip-addr	cmd=get_database: type1_test	
+19/02/23 12:47:51 INFO HiveMetaStore: 0: get_table : db=type1_test tbl=contacts_target
+19/02/23 12:47:51 INFO audit: ugi=root	ip=unknown-ip-addr	cmd=get_table : db=type1_test tbl=contacts_target	
+19/02/23 12:47:51 INFO HiveMetaStore: 0: get_table : db=type1_test tbl=contacts_target
+19/02/23 12:47:51 INFO audit: ugi=root	ip=unknown-ip-addr	cmd=get_table : db=type1_test tbl=contacts_target	
+19/02/23 12:47:51 INFO CatalystSqlParser: Parsing command: int
+19/02/23 12:47:51 INFO CatalystSqlParser: Parsing command: string
+19/02/23 12:47:51 INFO CatalystSqlParser: Parsing command: string
+19/02/23 12:47:51 INFO CatalystSqlParser: Parsing command: string
+19/02/23 12:47:52 INFO CatalystSqlParser: Parsing command: array<string>
+19/02/23 12:47:55 INFO CodeGenerator: Code generated in 278.727089 ms
+19/02/23 12:47:56 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 281.5 KB, free 366.0 MB)
+19/02/23 12:47:56 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 24.0 KB, free 366.0 MB)
+19/02/23 12:47:56 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.1.29:43509 (size: 24.0 KB, free: 366.3 MB)
+19/02/23 12:47:56 INFO SparkContext: Created broadcast 0 from 
+19/02/23 12:47:57 INFO PerfLogger: <PERFLOG method=OrcGetSplits from=org.apache.hadoop.hive.ql.io.orc.ReaderImpl>
+19/02/23 12:47:57 INFO deprecation: mapred.input.dir is deprecated. Instead, use mapreduce.input.fileinputformat.inputdir
+19/02/23 12:47:58 INFO OrcInputFormat: FooterCacheHitRatio: 0/0
+19/02/23 12:47:58 INFO PerfLogger: </PERFLOG method=OrcGetSplits start=1550906277516 end=1550906278941 duration=1425 from=org.apache.hadoop.hive.ql.io.orc.ReaderImpl>
+19/02/23 12:47:58 INFO SparkContext: Starting job: show at SparkToHive.scala:14
+19/02/23 12:47:58 INFO DAGScheduler: Got job 0 (show at SparkToHive.scala:14) with 1 output partitions
+19/02/23 12:47:58 INFO DAGScheduler: Final stage: ResultStage 0 (show at SparkToHive.scala:14)
+19/02/23 12:47:58 INFO DAGScheduler: Parents of final stage: List()
+19/02/23 12:47:58 INFO DAGScheduler: Missing parents: List()
+19/02/23 12:47:59 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[4] at show at SparkToHive.scala:14), which has no missing parents
+19/02/23 12:47:59 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 8.4 KB, free 366.0 MB)
+19/02/23 12:47:59 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 4.5 KB, free 366.0 MB)
+19/02/23 12:47:59 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.1.29:43509 (size: 4.5 KB, free: 366.3 MB)
+19/02/23 12:47:59 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+19/02/23 12:47:59 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[4] at show at SparkToHive.scala:14) (first 15 tasks are for partitions Vector(0))
+19/02/23 12:47:59 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+19/02/23 12:47:59 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, ANY, 4918 bytes)
+19/02/23 12:47:59 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+19/02/23 12:47:59 INFO Executor: Fetching spark://192.168.1.29:45963/jars/Spark-2.1-hive-1.0.jar with timestamp 1550906259382
+19/02/23 12:47:59 INFO TransportClientFactory: Successfully created connection to /192.168.1.29:45963 after 78 ms (0 ms spent in bootstraps)
+19/02/23 12:47:59 INFO Utils: Fetching spark://192.168.1.29:45963/jars/Spark-2.1-hive-1.0.jar to /tmp/spark-854e4fdc-b3d2-43b6-9069-ab90d9079622/userFiles-636582d4-4387-48c6-9324-98243f701506/fetchFileTemp3500905802145170772.tmp
+19/02/23 12:48:00 INFO Executor: Adding file:/tmp/spark-854e4fdc-b3d2-43b6-9069-ab90d9079622/userFiles-636582d4-4387-48c6-9324-98243f701506/Spark-2.1-hive-1.0.jar to class loader
+19/02/23 12:48:00 INFO HadoopRDD: Input split: hdfs://localhost:9000/user/hive/warehouse/type1_test.db/contacts_target/000000_0:0+20373
+19/02/23 12:48:01 INFO OrcRawRecordMerger: min key = null, max key = null
+19/02/23 12:48:01 INFO ReaderImpl: Reading ORC rows from hdfs://localhost:9000/user/hive/warehouse/type1_test.db/contacts_target/000000_0 with {include: [true, true, true, true, true], offset: 0, length: 9223372036854775807}
+19/02/23 12:48:01 INFO CodeGenerator: Code generated in 14.939424 ms
+19/02/23 12:48:01 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2520 bytes result sent to driver
+19/02/23 12:48:01 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 2640 ms on localhost (executor driver) (1/1)
+19/02/23 12:48:01 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+19/02/23 12:48:02 INFO DAGScheduler: ResultStage 0 (show at SparkToHive.scala:14) finished in 2.698 s
+19/02/23 12:48:02 INFO DAGScheduler: Job 0 finished: show at SparkToHive.scala:14, took 3.149735 s
++---+--------------------+--------------------+-----+
+| id|                name|               email|state|
++---+--------------------+--------------------+-----+
+|  1|     Dr. Iza Gerhold|loragutkowski@yah...|   NJ|
+|  2|Katharyn Goyette DVM|sadiewunsch@hotma...|   VI|
+|  3|       Nikolas Tromp|danniekemmer@yaho...|   VI|
+|  4|Ms. Shawnna Gerla...|reichelson@hotmai...|   MP|
+|  5|       Jamil Stroman|olliedicki@feil-w...|   MI|
+|  6|         Elmer Lakin|lowejoanie@yahoo.com|   SD|
+|  7|   Vernetta Mitchell|diandrahoppe@yaho...|   IN|
+|  8|         Clide Moore|colvinrosenbaum@h...|   VA|
+|  9|   Dr. Tennille Lind| lary88@mckenzie.com|   ND|
+| 10|Dr. Prudence Bode...| missie27@erdman.com|   SD|
+| 11|     Camilo Predovic|  sage56@nicolas.com|   MH|
+| 12| Dr. Alvia Bahringer|casperhymen@hotma...|   WA|
+| 13|       Harden Brakus|oberbrunnerpeyton...|   WY|
+| 14|     Festus Reynolds|   idach@hotmail.com|   AZ|
+| 15|       Savanna Hayes|wilkie14@marks-la...|   LA|
+| 16|  Ms. Lauri Anderson|billygottlieb@gma...|   WV|
+| 17|   Mr. Fidencio West| juliana34@yahoo.com|   AL|
+| 18|        Erasmo Ferry|ozellmante@yahoo.com|   MH|
+| 19|     Ivanna Ondricka|kendalcrona@kuhic...|   VT|
+| 20|Mr. Immanuel Scho...|zulaufeulalie@gma...|   OR|
++---+--------------------+--------------------+-----+
+only showing top 20 rows
+
+19/02/23 12:48:02 INFO SparkContext: Invoking stop() from shutdown hook
+19/02/23 12:48:02 INFO SparkUI: Stopped Spark web UI at http://192.168.1.29:4040
+19/02/23 12:48:02 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+19/02/23 12:48:02 INFO MemoryStore: MemoryStore cleared
+19/02/23 12:48:02 INFO BlockManager: BlockManager stopped
+19/02/23 12:48:02 INFO BlockManagerMaster: BlockManagerMaster stopped
+19/02/23 12:48:02 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+19/02/23 12:48:02 INFO SparkContext: Successfully stopped SparkContext
+19/02/23 12:48:02 INFO ShutdownHookManager: Shutdown hook called
+19/02/23 12:48:02 INFO ShutdownHookManager: Deleting directory /tmp/spark-854e4fdc-b3d2-43b6-9069-ab90d9079622
+root@big-vm:/home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/target# 
+root@big-vm:/home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/target# 
+root@big-vm:/home/ubuntu/git/spark-project/spark-2.1.0-examples/spark-2.1.0-hive-maven-project/target# 
+
